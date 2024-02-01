@@ -1,14 +1,9 @@
 #include <iostream>
-
+#include <cmath>
 int main()
 {
-    std::cout << "Hello World!" << std::endl;
-    std::cout << "Hello World!" << std::endl;
-    std::cout << "Hello World!" << std::endl;
-    std::cout << "Hello World!" << std::endl;
-    std::cout << "Hello World!" << std::endl;
-    
-    std::cout << "Hello World!" << std::endl;
-    std::cout << "Hello World!" << std::endl;
-    
+    int x,y;
+    std::cin >> x >> y; 
+    double z = std::sqrt(x*x+y*y);
+    std::cout << z << std::endl;
 }
