@@ -1,4 +1,3 @@
-
 #include <iostream>
 #include <string>
 #include <algorithm>
@@ -14,10 +13,10 @@ unsigned long long modexp(unsigned long long x, unsigned long long y, unsigned l
 }
 int main()
 {
-unsigned long long a,b,c,d;
+unsigned long long a,b,c,k,l;
 std::cin >> a >> b >> c;
-d = modexp(a,b,c);
-std::cout << d << std::endl;
+
+std::cout << l << std::endl;
 
     
 }
