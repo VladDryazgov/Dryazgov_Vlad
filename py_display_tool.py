@@ -12,7 +12,7 @@ with open('data.csv', 'r') as datafile:
         Y.append(float(ROWS[1]))
 
 plt.plot(X, Y)
-plt.title('Line Graph using CSV')
+plt.title('Graph t(N) for current algorhythm')
 plt.xlabel('time, nanoseconds')
 plt.ylabel('number of elements in an array')
 plt.show()
