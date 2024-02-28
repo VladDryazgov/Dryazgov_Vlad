@@ -3,21 +3,15 @@
 #include <string>
 #include <algorithm>
 #include<cstring>
-unsigned long long modexp(unsigned long long x, unsigned long long y, unsigned long long N)
-{
-  if (y == 0) return 1;
-  unsigned long long z = modexp(x, y / 2, N);
-  if (y % 2 == 0)
-    return (z*z) % N;
-  else
-    return ((x % N) *((z*z) % N)) % N;
-}
+#include <chrono>
+using namespace std;
+
 int main()
 {
-unsigned long long a,b,c,d;
-std::cin >> a >> b >> c;
-d = modexp(a,b,c);
-std::cout << d << std::endl;
+std::srand(std::time(nullptr));
+for (int i = 0; i < 10; i++){
+int d = std::rand();
+std::cout << d << std::endl;}
 
     
 }
