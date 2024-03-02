@@ -4,7 +4,7 @@ import math
 
 X = []
 Y = []
-i=320
+i=320 #by digits (task;subtask;version) description written on the graphs
 with open('data.csv', 'r') as datafile:
     plotting = csv.reader(datafile, delimiter=';')
     
@@ -12,42 +12,42 @@ with open('data.csv', 'r') as datafile:
         X.append(math.log(float(ROWS[0])))
         Y.append((float(ROWS[1])))
 match i:
-    case 10:
+    case 110:
         plt.scatter(X[:100], Y[:100],color='b')
         plt.title('Graph t(N) for lin search on worst')
         plt.ylabel('time, nanoseconds')
         plt.xlabel('number of elements in an array')
-    case 11:
+    case 111:
         plt.scatter(X[:100], Y[:100],color='b')
         plt.title('Graph t(N) for lin search on avg')
         plt.ylabel('time, nanoseconds')
         plt.xlabel(' number of elements in an array')
-    case 20:
+    case 120:
         plt.scatter(X[:27], Y[:27],color='b')
         plt.title('Graph t(N) for bin search on worst')
         plt.ylabel('time, nanoseconds')
         plt.xlabel('log of number of elements in an array')
-    case 21:
+    case 121:
         plt.scatter(X[:27], Y[:27],color='b')
         plt.title('Graph t(N) for bin search on avg')
         plt.ylabel('time, nanoseconds')
         plt.xlabel('log of number of elements in an array')
-    case 30:
+    case 210:
         plt.scatter(X[3:], Y[3:],color='b')
         plt.title('Graph t(N) for sum search on worst')
         plt.ylabel('log of time, nanoseconds')
         plt.xlabel(' number of elements in an array')
-    case 31:
+    case 211:
         plt.scatter(X[3:], Y[3:],color='b')
         plt.title('Graph t(N) for sum search on avg')
         plt.ylabel('log of time, nanoseconds')
         plt.xlabel(' number of elements in an array')
-    case 40:
+    case 220:
         plt.scatter(X[1:100], Y[1:100],color='b')
         plt.title('Graph t(N) for smartsum search on worst')
         plt.ylabel('time, nanoseconds')
         plt.xlabel(' number of elements in an array')
-    case 41:
+    case 221:
         plt.scatter(X[8:100], Y[8:100],color='b')
         plt.title('Graph t(N) for smartsum search on avg')
         plt.ylabel('time, nanoseconds')
