@@ -96,8 +96,8 @@ int main()
     // fout.close();
     fout.open("data.csv", ios::out);
     int ver = 4;  // with that you control the version of the task (1-lin,2-bin,3-silly sum,4-smart sum)
-    int rand = 0; // with that you control either use average case or the worst (1-avg, anything except that - worst)
-    for (unsigned long long j = 100; j < 100000; j += 1000)
+    int rand = 1; // with that you control either use average case or the worst (1-avg, anything except that - worst)
+    for (unsigned long long j = 10; j < 1000000; j += 10000)
     {
 
         unsigned long long size = j;
@@ -123,6 +123,9 @@ int main()
         {
             u = -1;
         }
+        long long w = 0;
+        int p = 5000;
+        for (int k =0;k<p+1;k++){
         auto begin = chrono::steady_clock::now();
         if (ver == 1)
         {
@@ -144,6 +147,9 @@ int main()
 
         auto elapsed_ms = std::chrono::duration_cast<std::chrono::nanoseconds>(end - begin);
         auto t = elapsed_ms.count();
+        w+=t;
+        }
+        long long t = w/p;
 
         fout << size << "; " << t << endl;
     }
